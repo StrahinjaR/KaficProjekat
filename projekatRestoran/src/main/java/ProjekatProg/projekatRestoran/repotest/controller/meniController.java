@@ -1,35 +1,39 @@
 package ProjekatProg.projekatRestoran.repotest.controller;
 
 import ProjekatProg.projekatRestoran.repotest.model.meniEntitet;
-import ProjekatProg.projekatRestoran.repotest.repository.meniRepository; // Corrected class name
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@Controller
-public class meniController { // Corrected class name
-
-    private final meniRepository repository; // Corrected class name
+@RestController
+public class meniController {
 
     @Autowired
-    public meniController(meniRepository repository) { // Corrected constructor
-        this.repository = repository;
-    }
+    private JdbcTemplate jdbcTemplate;
+    @GetMapping("/fetch-data")
+    @CrossOrigin
+    public Map<String, List<meniEntitet>> fetchData() {
+        String sql = "SELECT * FROM MENI";
+        List<meniEntitet> meniEntitets = jdbcTemplate.query(
+                sql,
+                (resultSet, rowNum) -> {
+                    meniEntitet meniEntitet = new meniEntitet();
+                    meniEntitet.setId(resultSet.getLong("id"));
+                    meniEntitet.setNazivProizvoda(resultSet.getString("naziv_proizvoda"));
+                    meniEntitet.setCenaProizvoda(resultSet.getInt("cena_proizvoda"));
+                    return meniEntitet;
+                }
+        );
 
-    @GetMapping("/meni") // Specify the mapping URL
-    public String printMeni(Model model) {
-
-        List<meniEntitet> menuItems = repository.findAll();
-
-        model.addAttribute("menuItems", menuItems);
-        for (meniEntitet menuItem : menuItems) {
-            System.out.println(menuItem);
-        }
-        System.out.println("Test");
-         //Return the name of the HTML template
-      return "/meni";
+        Map<String, List<meniEntitet>> responseMap = new HashMap<>();
+        responseMap.put("meni", meniEntitets);
+        return responseMap;
     }
 }
