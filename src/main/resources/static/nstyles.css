@@ -1,0 +1,231 @@
+  /* Global styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(proba5.jpg);
+  }
+  
+
+  /* Navbar styles */
+  .navbar {
+
+    background-color:rgba(46,20,19,1);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .navbar-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+
+  .navbar-options {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto; /* Horizontally center the options */
+    padding: 0;
+  }
+
+  .navbar-options li {
+    font-size: 18px;
+  }
+
+  .navbar-options li a {
+    color: white;
+    text-decoration: none;
+  }
+     .icon-button {
+         display: inline-block;
+         padding: 10px 20px;
+         border: none;
+         height: 80px;
+         width: 240px;
+         //background-color:rgba(46,20,19,1);
+         background-color: rgba(0, 0, 0, 0.05); /* Transparent background */
+         box-shadow: 0px 0px 10px rgb(2, 2, 2);
+         color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+         text-align: center;
+           transform: scale(1); /* Set the initial scale to 1 (no change in size) */
+             transition: transform 0.4s ease;
+        }
+
+    .icon-button:hover{
+    transform: scale(1.2);}
+        /* Style for the icon (adjust the width and height as needed) */
+    .icon10kar {
+         display: inline-block;
+         margin-left: -60px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+
+        .icon9kar {
+         display: inline-block;
+         margin-left: -70px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .icon9frapucino {
+         display: inline-block;
+         margin-left: -75px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .icon8kar {
+         display: inline-block;
+         margin-left: -79px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .icon8karlimunada {
+         display: inline-block;
+         margin-left: -80px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .crnabela {
+         display: inline-block;
+         margin-left: -41px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .bitter {
+         display: inline-block;
+         margin-left: -60px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .karamel {
+         display: inline-block;
+         margin-left: -88px;
+         width: 70px; /* Adjust the width of the icon */
+         height: 80px; /* Adjust the height of the icon */
+         margin-right: 20px; /* Adjust the spacing between the icon and text */
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .latte {
+         display: inline-block;
+         margin-left: -110px;
+         width: 70px;
+         height: 80px;
+         margin-right: 20px;
+         margin-top: -10px;
+        vertical-align: middle;
+        border-radius: 10px 0px 0px 10px;
+        }
+        .form-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #readOnlyInput1 {
+            width: 45%;
+            height: 250px;
+            padding: 10px;
+            margin-left: 153px;
+            margin-right: 80px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-family: monospace;
+            white-space: pre-wrap;
+           
+            
+        }
+
+
+        .column-container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+
+        #readOnlyInput2 {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            pointer-events: none;
+            margin-bottom: 60px;
+
+        }
+
+
+        button {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top:5px;
+            margin-right:25px;
+        }
+    #test1
+        {
+            text-align:center;
+                background-image: url(https://coffeedream.rs/wp-content/uploads/2022/12/beige-paintbrush-stroke-textured-background-copy-1.webp);
+              background-blend-mode: multiply;
+              background-color:#2b0e0cec;
+              background-size: cover;
+              background-repeat: no-repeat;
+              height:375px;
+              width:1300px;
+              border-radius:15px;
+              box-shadow:10px 5px 5px rgb(200, 200, 200);
+        }
+        #btn{
+              background-color: #3b2a29ec;
+              color: rgb(204, 191, 191);
+              border: none;
+              padding: 10px 20px;
+              margin-top: 10px;
+
+              border-radius: 5px;
+              cursor: pointer;
+              font-weight: bold;
+
+          }
+          #btn:hover {
+            background-color: #664a49ec;
+          }
+          #labela{
+                    font-weight: bold;}

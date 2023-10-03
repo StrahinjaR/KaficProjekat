@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Video container styles */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Overlay pseudo-element */
+        .video-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            top: 0; /* Stick to the top */
+        }
+
+        .navbar-icon {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+
+        .navbar-options {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0 auto; /* Horizontally center the options */
+            padding: 0;
+        }
+
+        .navbar-options li {
+            font-size: 18px;
+        }
+
+        .navbar-options li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        /* Overlay text styles */
+        .overlay-text {
+            color: white;
+            font-size: 36px;
+            text-align: left;
+            padding: 20px;
+            margin-top: 250px;
+            margin-left: 200px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            animation: fadeIn 3s;
+            mix-blend-mode: difference;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="videsajtt.mp4" type="video/mp4">
+        </video>
+        <div class="navbar">
+            <img src="test5551.png" alt="Icon" class="navbar-icon">
+            <ul class="navbar-options">
+                <li><a href="index.html">O nama</a></li>
+                <li><a href="meni.html">Meni</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+                <li><a href="narucivanje.html">Naručivanje</a></li>
+            </ul>
+        </div>
+        <div class="overlay-text">Dobrodošli u "Rest" - oazu opuštanja i uživanja!
+            <p>Mesto gde vreme usporava, a duša dobija priliku da odahne.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
